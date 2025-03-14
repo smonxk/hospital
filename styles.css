@@ -4,17 +4,18 @@ body,html {
 
 body {
     background: white;
-    font-family: Playfair Display;
+    font-family: Work Sans;
     color: rgb(124, 105, 105);
     margin: 0;
 }
 
 .hospital-house {
     position: relative;
-    background:  url('./hospital.webp') no-repeat center center;
-    background-size: cover;
     height: 100vh;
+    overflow: hidden;
 }
+
+
 
 .hospital-house::before {
     content: "";
@@ -27,14 +28,50 @@ body {
     z-index: 0; 
   }
 
+  .hospital-house::after {
+    content: "";
+    position: absolute;
+    background:  url('./hospital.webp') no-repeat center center;
+    background-size: cover;
+    width: 110%;
+    height: 110%;
+    transform: rotate(2deg);
+    z-index: -1;
+    top: -5%;
+    left: -5%;
+  }
+
+
 header {
     display: flex;
     gap: 20px;
-    justify-content: flex-end;
-    padding: 10px 20px 0 0;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 0 20px;
     z-index: 1;
     position: relative;
 }
+
+.address-text {
+    color: white;
+    margin: 20px;
+    position: relative;
+    bottom: 10px;
+    font-family: 'Work Sans';
+    font-weight: 300;
+}
+
+
+.header-left {
+    display: flex;
+    position: relative;
+    top: 10px;
+}
+
+.header-right {
+    display: flex;
+}
+
 
 .search-bar {
     border: white 2px solid;
@@ -44,11 +81,25 @@ header {
     width: 200px;
     background: url('./search.png') no-repeat right 15px center;
     background-size: 16px;
-    margin-right: 10px;
+    margin-right: 20px;
+    position: relative;
+
 }
 
 .search-bar::placeholder {
     color: white;
+    font-family: 'Work Sans';
+}
+
+.search-bar:focus {
+    border-color: white;
+    outline: none;
+    color: white;
+    font-family: 'Work Sans';
+}
+
+.search-bar::-webkit-search-cancel-button {
+    display: none;
 }
 
 .welcome {
@@ -57,16 +108,19 @@ header {
     position: relative;
     color: white;
     left: 5%;
-    top: 15%;
+    top: 17%;
 }
 
 #welcome-text {
     position: relative;
-    bottom: 20px;
+    bottom: 30px;
+    font-family: 'Work Sans', helvetica;
+    font-weight: lighter;
 }
 
 #hospital-name {
     font-size: 72px;
+    font-family: 'Playfair Display';
 }
 
 .centering-container {
@@ -77,11 +131,50 @@ header {
 }
 .sections {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 90%;
     justify-content: center;
-    gap: 100px;
+    gap: 20px;
     height: 300px;
     margin-top: 70px;
 }
 
+.section  {
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Playfair Display';
+    
+}
+
+.contact-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(230, 200, 164);
+}
+
+.pharmacy-container {
+    border: rgb(97, 143, 128) 2px solid;
+}
+
+.departments-container {
+    border: rgb(100, 179, 139) 2px solid;
+}
+.map-container {
+    border: rgb(191, 175, 123) 2px solid;
+}
+.career-container {
+    border: rgb(179, 154, 100) 2px solid;
+}
