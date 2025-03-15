@@ -1,9 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body,html {
     overflow-x: hidden;
 }
 
 body {
-    background: white;
+    background: rgb(255, 255, 255);
     font-family: Work Sans;
     color: rgb(124, 105, 105);
     margin: 0;
@@ -153,18 +157,6 @@ header {
     
 }
 
-.contact-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 15px 30px;
-    font-family: 'Work Sans';
-    font-weight: 500;
-    border-radius: 25px;
-    border: none;
-    background-color: rgb(230, 200, 164);
-}
-
 .pharmacy-container {
     border: rgb(97, 143, 128) 2px solid;
 }
@@ -177,4 +169,66 @@ header {
 }
 .career-container {
     border: rgb(179, 154, 100) 2px solid;
+}
+
+.contact-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-weight: 500;
+    height: 30vh;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 20px;
+    align-items: flex-end;
+    font-size: 16px;
+
+
+}
+
+.contact-button {
+   /* position: fixed;
+    bottom: 20px;
+    right: 20px; */
+    width: 150px;
+    padding: 15px 30px;
+    font-family: 'Work Sans';
+    font-weight: 500;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(230, 200, 164);
+    margin: 0;
+}
+
+.contact-item {
+    background-color: white;
+    border-radius: 25px;
+    padding: 13px 30px;
+    margin: 0;
+}
+
+.contact-item-body {
+    background-color: rgb(206, 226, 215);
+    color:rgb(83, 123, 110);
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(124, 105, 105);
+}
+
+.map-view {
+    display: flex;
+    justify-content: center;
+}
+
+#map {
+    height: 70vh;
+    border-radius: 30px;
 }
